@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface IAdministrateur extends JpaRepository<Administrateur, String> {
+public interface IAdministrateur extends JpaRepository<Administrateur, Integer> {
 
     Administrateur findById(int id);
 

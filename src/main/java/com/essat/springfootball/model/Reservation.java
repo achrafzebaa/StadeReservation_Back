@@ -1,5 +1,7 @@
 package com.essat.springfootball.model;
 
+import java.util.Date;
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -16,7 +18,7 @@ public class Reservation {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    private String date_res;
+    private Date date_res;
     private int heure_debut;
     private int heure_fin;
 
@@ -26,4 +28,14 @@ public class Reservation {
     @ManyToOne
     @JoinColumn(name = "terrain_id", nullable = false)
     private Terrain terrain;
+
+	public Date getDate_res() {
+		// TODO Auto-generated method stub
+		return date_res;
+	}
+
+	public Terrain getTerrain() {
+		// TODO Auto-generated method stub
+		return terrain;
+	}
 }

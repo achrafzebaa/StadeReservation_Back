@@ -26,4 +26,9 @@ public class Terrain {
     @JsonIgnore
     private List<Reservation> reservations;
 
+	public Integer getId() {
+		// TODO Auto-generated method stub
+		return id;
+	}
+
 }

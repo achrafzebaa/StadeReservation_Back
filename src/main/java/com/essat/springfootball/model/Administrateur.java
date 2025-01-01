@@ -19,4 +19,12 @@ public class Administrateur {
     private String nom;
     private String username;
     private String password;
+	public Object getPassword() {
+		// TODO Auto-generated method stub
+		return password;
+	}
+	public String getUsername() {
+		// TODO Auto-generated method stub
+		return username;
+	}
 }

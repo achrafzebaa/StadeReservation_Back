@@ -6,11 +6,12 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
+import java.util.Date;
 import java.util.List;
 
 public interface IReservation extends JpaRepository<Reservation, Integer> {
     @Query("SELECT r FROM Reservation r WHERE r.terrain = :terrain AND r.date_res = :date")
-    List<Reservation> findByTerrainAndDate(@Param("terrain") Terrain terrain, @Param("date") String date);
+    List<Reservation> findByTerrainAndDate(@Param("terrain") Terrain terrain, @Param("date") Date date);
     List<Reservation> findByTerrainId(int terrainId);
 
 }
